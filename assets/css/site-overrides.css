@@ -1,0 +1,49 @@
+
+/* Personal site additions for the HTML5 UP Forty template */
+#header .logo span { margin-left: .6em; font-size: .72em; opacity: .72; }
+#banner h1 em { font-family: Georgia, serif; font-weight: 400; }
+#banner .content p { max-width: 58em; }
+#menu .links a[aria-current="page"] { color: #9bf1ff; }
+.gallery-section { padding-top: 3.5em; padding-bottom: 4em; }
+.filter-bar { display:flex; flex-wrap:wrap; gap:.65em; margin:0 0 1em; }
+.filter-bar .button { margin:0; }
+.filter-bar .button.active { background:#fff; color:#242943 !important; box-shadow:inset 0 0 0 2px #9bf1ff; }
+.filter-bar .count { display:inline-block; margin-left:.45em; opacity:.65; font-size:.8em; }
+.gallery-result { color:rgba(244,244,255,.65); font-size:.85em; margin:0 0 1.25em; }
+.gallery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5em; }
+.gallery-card { min-width:0; }
+.gallery-card[hidden] { display:none !important; }
+.gallery-image-link { display:block; overflow:hidden; aspect-ratio:1.2/1; background:#30354f; }
+.gallery-image-link img { width:100%; height:100%; object-fit:cover; transition:transform .35s ease; }
+.gallery-image-link:hover img { transform:scale(1.045); }
+.gallery-card-copy { display:flex; justify-content:space-between; align-items:baseline; gap:.75em; padding:.8em .1em 1.1em; }
+.gallery-card-copy h3 { font-size:1em; margin:0; }
+.gallery-card-copy p { margin:0; color:rgba(244,244,255,.58); font-size:.78em; text-align:right; }
+.lightbox { position:fixed; z-index:10000; inset:0; display:none; align-items:center; justify-content:center; padding:3em; background:rgba(12,14,24,.94); }
+.lightbox.open { display:flex; }
+.lightbox figure { margin:0; max-width:min(100%,1100px); max-height:100%; text-align:center; }
+.lightbox figure img { max-width:100%; max-height:78vh; margin:auto; object-fit:contain; }
+.lightbox figcaption { color:#fff; padding-top:.8em; }
+.lightbox-close { position:absolute; top:1em; right:1.2em; background:transparent; border:0; color:#fff; font-size:2.5em; cursor:pointer; }
+.about-layout { display:grid; grid-template-columns:minmax(220px,.7fr) 1.3fr; gap:3em; align-items:center; padding:3.5em 0; }
+.about-photo img { width:100%; max-height:560px; object-fit:cover; }
+.skill-list { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5em; margin:2em 0; }
+.skill > div:first-child { display:flex; justify-content:space-between; margin-bottom:.5em; }
+.skill-track { height:8px; background:rgba(212,212,255,.15); border-radius:10px; overflow:hidden; }
+.skill-track span { display:block; height:100%; background:#9bf1ff; }
+.contact-layout { display:grid; grid-template-columns:1.4fr .6fr; gap:3em; margin-top:2em; }
+.contact-details { padding:1em 0; }
+#form-status { min-height:1.5em; color:#9bf1ff; }
+@media screen and (max-width:980px) {
+ .gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .about-layout { gap:2em; }
+}
+@media screen and (max-width:736px) {
+ #header .logo span { display:none; }
+ .gallery-grid { grid-template-columns:1fr; gap:.75em; }
+ .gallery-card-copy { padding:.6em .1em 1em; }
+ .about-layout,.contact-layout { grid-template-columns:1fr; gap:1.5em; }
+ .about-photo img { max-height:440px; }
+ .skill-list { grid-template-columns:1fr; gap:1em; }
+ .lightbox { padding:1em; }
+}
